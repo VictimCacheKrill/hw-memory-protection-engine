@@ -31,7 +31,6 @@ The engine is purpose-built to defend against hardware-level physical attacks on
   * 128 parallel optimized 4-bit S-boxes per round.
   * Integrated lightweight bit-permutation diffusion layer maximizing avalanche distribution.
   * Context-aware 64-bit key and physical address mixing across all rounds.
-└── README.md                   # Project documentation
 
 ## Verification
 yosys -p "read_verilog rtl/cache_line_enc_opt.v; synth -top cache_line_encryption_engine; stat" > output.txt
