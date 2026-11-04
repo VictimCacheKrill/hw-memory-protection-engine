@@ -67,6 +67,6 @@ module cache_line_encryption_engine (
     wire [511:0] r1, r2;
 
     cache_line_enc_round round1 (.data_in(cache_line_plaintext), .round_key(master_key), .address_tweak(physical_address), .data_out(r1));
-    cache_line_enc_round round2 (.data_in(r1),                 .round_key(master_key), .address_tweak(physical_address), .data_out(r2));
-    cache_line_enc_round round3 (.data_in(r2),                 .round_key(master_key), .address_tweak(physical_address), .data_out(cache_line_ciphertext));
+    cache_line_enc_round round2 (.data_in(r1), .round_key(master_key), .address_tweak(physical_address), .data_out(r2));
+    cache_line_enc_round round3 (.data_in(r2), .round_key(master_key), .address_tweak(physical_address), .data_out(cache_line_ciphertext));
 endmodule
